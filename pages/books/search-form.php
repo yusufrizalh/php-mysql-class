@@ -1,3 +1,10 @@
+<?php
+if (!isset($_SESSION['name'])) {
+    header("location: ../auth/login.php");
+    exit();
+}
+?>
+
 <div>
     <form action="./searching.php" method="get">
         <div class="row">

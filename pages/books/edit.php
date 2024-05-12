@@ -1,6 +1,11 @@
 <?php
 include("../../layouts/header.php");
 
+if (!isset($_SESSION['name'])) {
+    header("location: ../auth/login.php");
+    exit();
+}
+
 require_once "../../config/connection.php";
 
 if (isset($_GET['isbn']) && !empty(trim($_GET['isbn']))) {

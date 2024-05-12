@@ -1,5 +1,10 @@
 <?php
 include("../../layouts/header.php");
+
+if (!isset($_SESSION['name'])) {
+    header("location: ../auth/login.php");
+    exit();
+}
 ?>
 
 <div class="container mt-5">

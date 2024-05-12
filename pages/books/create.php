@@ -1,5 +1,10 @@
 <?php
 include("../../layouts/header.php");
+
+if (!isset($_SESSION['name'])) {
+    header("location: ../auth/login.php");
+    exit();
+}
 ?>
 
 <div class="container mt-5 py-5">
@@ -17,15 +22,15 @@ include("../../layouts/header.php");
                                 <input type="number" name="isbn" class="form-control" autocomplete="off" autofocus placeholder="Enter isbn number" required>
                             </div>
                             <div class="mb-3">
-                            <label for="title" class="form-label">Book Title</label>
+                                <label for="title" class="form-label">Book Title</label>
                                 <input type="text" name="title" class="form-control" autocomplete="off" placeholder="Enter book title" required>
                             </div>
                             <div class="mb-3">
-                            <label for="price" class="form-label">Book Price</label>
+                                <label for="price" class="form-label">Book Price</label>
                                 <input type="text" name="price" class="form-control" autocomplete="off" placeholder="Enter book price" required>
                             </div>
                             <div class="mb-3">
-                            <label for="fk_author_id" class="form-label">Book Author</label>
+                                <label for="fk_author_id" class="form-label">Book Author</label>
                                 <?php
                                 require_once "../../config/connection.php";
                                 $sql = "SELECT * FROM authors ORDER BY id ASC";
