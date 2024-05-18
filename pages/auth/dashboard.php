@@ -28,7 +28,13 @@ if (!isset($_SESSION['name'])) {
                     <div class="card-body">
                         <?php
                         while ($row_users_count = $result_users_count->fetch_assoc()) {
-                            echo "<h1>" . $row_users_count['users_count'] . " Users</h1>";
+                        ?>
+                            <h1>
+                                <a href="../users/index.php" class="text-dark text-decoration-none">
+                                    <?php echo $row_users_count['users_count'] ?> Users
+                                </a>
+                            </h1>
+                        <?php
                         }
                         ?>
                     </div>
@@ -53,7 +59,14 @@ if (!isset($_SESSION['name'])) {
                     <div class="card-body">
                         <?php
                         while ($row_books_count = $result_books_count->fetch_assoc()) {
-                            echo "<h1>" . $row_books_count['books_count'] . " Books</h1>";
+                        ?>
+                            <h1>
+                                <a href="../books/index.php" class="text-dark text-decoration-none">
+                                    <?php echo $row_books_count['books_count']; ?> Books
+                                </a>
+                                </a>
+                            </h1>
+                        <?php
                         }
                         ?>
                     </div>
@@ -78,7 +91,15 @@ if (!isset($_SESSION['name'])) {
                     <div class="card-body">
                         <?php
                         while ($row_authors_count = $result_authors_count->fetch_assoc()) {
-                            echo "<h1>" . $row_authors_count['authors_count'] . " Authors</h1>";
+                            // echo "<h1>" . $row_authors_count['authors_count'] . " Authors</h1>";
+                        ?>
+                            <h1>
+                                <a href="../authors/index.php" class="text-dark text-decoration-none">
+                                    <?php echo $row_authors_count['authors_count']; ?> Authors
+                                </a>
+                                </a>
+                            </h1>
+                        <?php
                         }
                         ?>
                     </div>
