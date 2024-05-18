@@ -21,7 +21,7 @@ if (isset($_GET['isbn']) && !empty(trim($_GET['isbn']))) {
 ?>
             <div class="container mt-5 py-5">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="card">
                             <div class="card-header">
                                 <h4>ISBN: <?php echo $row['isbn']; ?></h4>
@@ -31,7 +31,7 @@ if (isset($_GET['isbn']) && !empty(trim($_GET['isbn']))) {
                                 <p>Price: <?php echo $row['price']; ?></p>
                                 <p>Author: <?php echo $row['author']; ?></p>
                             </div>
-                            <div class="card-footer">
+                            <div class="card-footer d-flex justify-content-between">
                                 <a href="./edit.php?isbn=<?php echo $row['isbn']; ?>" class="btn btn-md btn-warning">
                                     Edit
                                 </a>

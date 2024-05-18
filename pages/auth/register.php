@@ -1,6 +1,6 @@
 <!-- header -->
 <?php
-include("../../layouts/header.php");
+// include("../../layouts/header.php");
 // database connection
 require_once "../../config/connection.php";
 

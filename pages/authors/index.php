@@ -26,7 +26,7 @@ include("../../layouts/header.php");
                     while ($row = $result->fetch_assoc()) {
                     ?>
                         <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                            <a href="./show_author.php?author=<?php echo $row['author_name']; ?>" class="text-primary text-decoration-none">
+                            <a href="../books/show_author.php?author=<?php echo $row['author_name']; ?>" class="text-primary text-decoration-none">
                                 <?php echo $row['author_name']; ?>
                             </a>
                         </li>
