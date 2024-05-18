@@ -46,6 +46,19 @@ if (isset($_GET['author']) && !empty(trim($_GET['author']))) {
                 ?>
             </div>
         </div>
+    <?php
+    } else {
+    ?>
+        <div class="container mt-5 py-5 px-3">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-header bg-secondary text-white">
+                        <h4>Books Not Found</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
 <?php
     }
 }

@@ -22,7 +22,7 @@ if (isset($_SESSION['email'])) {
                     <div class="row">
                         <div class="col-md-8">
                             <div class="card">
-                                <div class="card-header">
+                                <div class="card-header bg-primary text-white">
                                     <h4><strong>Profile: <?php echo $row['name']; ?></strong></h4>
                                 </div>
                                 <div class="card-body">

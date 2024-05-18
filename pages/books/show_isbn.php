@@ -23,7 +23,7 @@ if (isset($_GET['isbn']) && !empty(trim($_GET['isbn']))) {
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card">
-                            <div class="card-header">
+                            <div class="card-header bg-primary text-white">
                                 <h4>ISBN: <?php echo $row['isbn']; ?></h4>
                             </div>
                             <div class="card-body">
